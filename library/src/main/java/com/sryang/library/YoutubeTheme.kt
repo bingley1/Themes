@@ -13,13 +13,19 @@ import com.sryang.library.owl.theme.Images
 import com.sryang.library.owl.theme.LocalElevations
 import com.sryang.library.owl.theme.LocalImages
 
-private val primary = Color(0xFF778979)
-private val primaryContainer = Color(0xFFccdcc1)
+private val primary = Color(0xFF000000)
+private val primaryContainer = Color(0xFF000000)
+private val onPrimary = Color(0xFF000000)
 private val onTertiary = Color(0xFFe3d6ab)
-private val background = Color(0xFFccdcc1)
-private val secondary = Color(0xFFa9916b)
+private val background = Color(0xFF000000)
+private val secondary = Color(0xFF000000)
+private val onSecondary = Color(0xFF000000)
 private val onBackground = Color(0xFFd78258)
-private val surface = Color(0xFFccdcc1)
+private val surface = Color(0xFF000000)
+private val onSurface = Color(0xFFFFFFFF)
+private val onSecondaryContainer = Color(0xFFFFFFFF)
+private val secondaryContainer = Color(0xFF222222)
+private val onSurfaceVariant = Color(0xFFFFFFFF)
 
 private val rustThemeDark = darkColorScheme(
     primary = primary,
@@ -28,36 +34,36 @@ private val rustThemeDark = darkColorScheme(
     primaryContainer = primaryContainer
 )
 
-private val rustThemeLight = lightColorScheme(
+private val youtubeThemeLight = lightColorScheme(
     primary = primary, // top app bar title,
-    onPrimary = Color.White,
+    onPrimary = onPrimary,
     secondary = secondary,
     primaryContainer = primaryContainer, // bottom app bar background
-    onSecondary = twitterBlack, // contents color
+    onSecondary = onSecondary, // contents color
     surface = surface, // bottom navigation bar background, top app bar background
-//    onSurface = Color.White,        // app bar text color
-//    onSurfaceVariant = Color.White, // app bar action icons
+    onSurface = onSurface,        // app bar text color
+    onSurfaceVariant = onSurfaceVariant, // app bar action icons, bottom bar icons
     onBackground = onBackground,
     onTertiary = onTertiary,
-    onTertiaryContainer = Color.White,
-    onSecondaryContainer = Color.White,
-    onPrimaryContainer = Color.White,
-    inversePrimary = Color.White,
-    secondaryContainer = twitterDkGrey, //bottom navigation item background
-    tertiary = Color.White,
-    tertiaryContainer = Color.White,
+//    onTertiaryContainer = Color.Blue,
+    onSecondaryContainer = onSecondaryContainer, // selected bottom navigation item color
+//    onPrimaryContainer = Color.Blue,
+//    inversePrimary = Color.Blue,
+    secondaryContainer = secondaryContainer, //bottom navigation item background
+//    tertiary = Color.Blue,
+//    tertiaryContainer = Color.Blue,
     background = background, // background
-    surfaceVariant = Color.White,
-    surfaceTint = Color.White,
-    inverseSurface = Color.White,
-    inverseOnSurface = Color.White,
-    error = Color.White,
-    onError = Color.White,
-    errorContainer = Color.White,
-    onErrorContainer = Color.White,
-    outline = Color.White,
-    outlineVariant = Color.White,
-    scrim = Color.White
+//    surfaceVariant = Color.Blue,
+//    surfaceTint = Color.Blue,
+//    inverseSurface = Color.Blue,
+//    inverseOnSurface = Color.Blue,
+//    error = Color.Blue,
+//    onError = Color.Blue,
+//    errorContainer = Color.Blue,
+//    onErrorContainer = Color.Blue,
+//    outline = Color.Blue,
+//    outlineVariant = Color.Blue,
+//    scrim = Color.Blue
 )
 
 private val LightElevation = Elevations()
@@ -66,14 +72,14 @@ private val LightImages = Images(lockupLogo = R.drawable.ic_lockup_blue)
 private val DarkImages = Images(lockupLogo = R.drawable.ic_lockup_white)
 
 @Composable
-fun RusticTheme(
+fun YoutubeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {
     val colorScheme = if (darkTheme) {
         rustThemeDark
     } else {
-        rustThemeLight
+        youtubeThemeLight
     }
 
     val elevation = if (darkTheme) DarkElevation else LightElevation

@@ -8,6 +8,11 @@ import com.sryang.library.jetsurvey.theme.JetsurveyTheme
 object ThemeProvider
 
 @Composable
+fun ThemeProvider.YoutubeTheme(contents: @Composable () -> Unit) {
+    YoutubeTheme(content = contents)
+}
+
+@Composable
 fun ThemeProvider.RusticTheme(contents: @Composable () -> Unit) {
     RusticTheme(content = contents)
 }
