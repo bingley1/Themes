@@ -29,8 +29,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.library.Buttons
 import com.sryang.library.BottomBarsProvider
 import com.sryang.library.JetCaster
+import com.sryang.library.JetSnack
+import com.sryang.library.JetSurvey
 import com.sryang.library.JetsnackScaffold
 import com.sryang.library.Pink
 import com.sryang.library.ThemeProvider
@@ -73,7 +76,6 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier
                         .width(300.dp)
                         .align(Alignment.Center)
-                        .background(Color.White)
                 ) {
                     Row(Modifier.height(height), verticalAlignment = Alignment.CenterVertically) {
                         Text(text = "Theme:")
@@ -96,13 +98,21 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun YoutubePreview() {
     ThemeProvider.Youtube {
         Scaffold(
             topBar = { TopAppBarProvider.YoutubeTopAppBar() },
             bottomBar = { BottomBarsProvider.YoutubeBottomBar() }
         ) {
-            Box(modifier = Modifier.padding(it))
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
+            ) {
+                Box(modifier = Modifier.align(Alignment.Center)) {
+                    Buttons()
+                }
+            }
         }
     }
 }
@@ -110,11 +120,19 @@ fun GreetingPreview() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview1() {
+fun JetCasterPreview() {
     ThemeProvider.JetCaster {
         JetsnackScaffold(topBar = { TopAppBarProvider.YoutubeTopAppBar() },
             bottomBar = { BottomBarsProvider.YoutubeBottomBar() }) {
-
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
+            ) {
+                Box(modifier = Modifier.align(Alignment.Center)) {
+                    Buttons()
+                }
+            }
         }
     }
 }
@@ -122,11 +140,19 @@ fun GreetingPreview1() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview3() {
+fun YellowPreview() {
     ThemeProvider.Yellow {
         JetsnackScaffold(topBar = { TopAppBarProvider.YoutubeTopAppBar() },
             bottomBar = { BottomBarsProvider.YoutubeBottomBar() }) {
-
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
+            ) {
+                Box(modifier = Modifier.align(Alignment.Center)) {
+                    Buttons()
+                }
+            }
         }
     }
 }
@@ -134,11 +160,19 @@ fun GreetingPreview3() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview4() {
+fun PinkPreview() {
     ThemeProvider.Pink {
         JetsnackScaffold(topBar = { TopAppBarProvider.YoutubeTopAppBar() },
             bottomBar = { BottomBarsProvider.YoutubeBottomBar() }) {
-
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
+            ) {
+                Box(modifier = Modifier.align(Alignment.Center)) {
+                    Buttons()
+                }
+            }
         }
     }
 }
@@ -146,11 +180,59 @@ fun GreetingPreview4() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview5() {
+fun TwitterPreview() {
     ThemeProvider.Twitter {
         JetsnackScaffold(topBar = { TopAppBarProvider.YoutubeTopAppBar() },
             bottomBar = { BottomBarsProvider.YoutubeBottomBar() }) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
+            ) {
+                Box(modifier = Modifier.align(Alignment.Center)) {
+                    Buttons()
+                }
+            }
+        }
+    }
+}
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Preview(showBackground = true)
+@Composable
+fun JetSurveyPreview() {
+    ThemeProvider.JetSurvey {
+        JetsnackScaffold(topBar = { TopAppBarProvider.YoutubeTopAppBar() },
+            bottomBar = { BottomBarsProvider.YoutubeBottomBar() }) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
+            ) {
+                Box(modifier = Modifier.align(Alignment.Center)) {
+                    Buttons()
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Preview(showBackground = true)
+@Composable
+fun JetSnackPreview() {
+    ThemeProvider.JetSnack {
+        JetsnackScaffold(topBar = { TopAppBarProvider.YoutubeTopAppBar() },
+            bottomBar = { BottomBarsProvider.YoutubeBottomBar() }) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(it)
+            ) {
+                Box(modifier = Modifier.align(Alignment.Center)) {
+                    Buttons()
+                }
+            }
         }
     }
 }

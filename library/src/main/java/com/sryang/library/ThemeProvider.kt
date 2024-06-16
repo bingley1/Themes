@@ -1,7 +1,7 @@
 package com.sryang.library
 
 import androidx.compose.runtime.Composable
-import com.example.jetsnack.ui.theme.JetsnackTheme
+import com.sryang.library.jetsnack.JetsnackTheme
 import com.sryang.library.jetcaster.theme.JetcasterTheme
 import com.sryang.library.jetsurvey.theme.JetsurveyTheme
 

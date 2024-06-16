@@ -13,7 +13,7 @@ import com.sryang.library.owl.theme.Images
 import com.sryang.library.owl.theme.LocalElevations
 import com.sryang.library.owl.theme.LocalImages
 
-private val primary = Color(0xFF000000)
+private val primary = Color(0xFFFFFFFF)
 private val primaryContainer = Color(0xFF000000)
 private val onPrimary = Color(0xFF000000)
 private val onTertiary = Color(0xFFe3d6ab)
@@ -21,11 +21,12 @@ private val background = Color(0xFF000000)
 private val secondary = Color(0xFF000000)
 private val onSecondary = Color(0xFF000000)
 private val onBackground = Color(0xFFd78258)
-private val surface = Color(0xFF000000)
+private val surface = Color(0xFF111111)
 private val onSurface = Color(0xFFFFFFFF)
 private val onSecondaryContainer = Color(0xFFFFFFFF)
-private val secondaryContainer = Color(0xFF222222)
+private val secondaryContainer = Color(0xFF444444)
 private val onSurfaceVariant = Color(0xFFFFFFFF)
+private val outline = Color(0xFFFFFFFF)
 
 private val rustThemeDark = darkColorScheme(
     primary = primary,
@@ -34,25 +35,38 @@ private val rustThemeDark = darkColorScheme(
     primaryContainer = primaryContainer
 )
 
+/**
+ * button
+ * @param onPrimary filled button text color
+ * @param surface elevatedButton background
+ * @param primary button(Outlined, elevated, text) text color
+ * @param outline outline button color
+ * @param onSecondaryContainer tonal button background
+ * @param secondaryContainer tonal background
+ *
+ *
+ * @param surface bottom navigation bar background, top app bar background, elevatedButton background
+ */
 private val youtubeThemeLight = lightColorScheme(
-    primary = primary, // top app bar title,
+    primary = primary, // top app bar title
     onPrimary = onPrimary,
     secondary = secondary,
     primaryContainer = primaryContainer, // bottom app bar background
     onSecondary = onSecondary, // contents color
-    surface = surface, // bottom navigation bar background, top app bar background
+    surface = surface,
     onSurface = onSurface,        // app bar text color
     onSurfaceVariant = onSurfaceVariant, // app bar action icons, bottom bar icons
     onBackground = onBackground,
     onTertiary = onTertiary,
-//    onTertiaryContainer = Color.Blue,
     onSecondaryContainer = onSecondaryContainer, // selected bottom navigation item color
+    secondaryContainer = secondaryContainer, //bottom navigation item background
+    background = background, // background
+    outline = outline,
+//    onTertiaryContainer = Color.Blue,
 //    onPrimaryContainer = Color.Blue,
 //    inversePrimary = Color.Blue,
-    secondaryContainer = secondaryContainer, //bottom navigation item background
 //    tertiary = Color.Blue,
 //    tertiaryContainer = Color.Blue,
-    background = background, // background
 //    surfaceVariant = Color.Blue,
 //    surfaceTint = Color.Blue,
 //    inverseSurface = Color.Blue,
@@ -61,7 +75,6 @@ private val youtubeThemeLight = lightColorScheme(
 //    onError = Color.Blue,
 //    errorContainer = Color.Blue,
 //    onErrorContainer = Color.Blue,
-//    outline = Color.Blue,
 //    outlineVariant = Color.Blue,
 //    scrim = Color.Blue
 )
