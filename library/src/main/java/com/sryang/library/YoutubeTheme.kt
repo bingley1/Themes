@@ -72,7 +72,7 @@ private val LightImages = Images(lockupLogo = R.drawable.ic_lockup_blue)
 private val DarkImages = Images(lockupLogo = R.drawable.ic_lockup_white)
 
 @Composable
-fun YoutubeTheme(
+fun Youtube(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {

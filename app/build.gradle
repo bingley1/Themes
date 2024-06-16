@@ -57,5 +57,5 @@ dependencies {
 
     implementation 'com.github.sarang628:TopAppBar:0f603fff8d'
     implementation 'com.github.sarang628:Scaffold:f601926f84'
-    implementation 'com.github.bingley1:bottombars:9f1f36d3c5'
+    implementation 'com.github.bingley1:BottomBars:c9cf25f2ff'
 }

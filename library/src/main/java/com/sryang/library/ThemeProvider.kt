@@ -8,8 +8,8 @@ import com.sryang.library.jetsurvey.theme.JetsurveyTheme
 object ThemeProvider
 
 @Composable
-fun ThemeProvider.YoutubeTheme(contents: @Composable () -> Unit) {
-    YoutubeTheme(content = contents)
+fun ThemeProvider.Youtube(contents: @Composable () -> Unit) {
+    Youtube(content = contents)
 }
 
 @Composable
@@ -33,16 +33,41 @@ fun ThemeProvider.Yellow(contents: @Composable () -> Unit) {
 }
 
 @Composable
-fun ThemeProvider.Jetcaster(contents: @Composable () -> Unit) {
+fun ThemeProvider.JetCaster(contents: @Composable () -> Unit) {
     JetcasterTheme(content = contents)
 }
 
 @Composable
-fun ThemeProvider.Jetsurvey(contents: @Composable () -> Unit) {
+fun ThemeProvider.JetSurvey(contents: @Composable () -> Unit) {
     JetsurveyTheme(content = contents)
 }
 
 @Composable
-fun ThemeProvider.Jetsnack(contents: @Composable () -> Unit) {
+fun ThemeProvider.JetSnack(contents: @Composable () -> Unit) {
     JetsnackTheme(content = contents)
 }
+
+sealed class ThemeTypes(
+    val name: String,
+    val contents: @Composable (@Composable () -> Unit) -> Unit
+) {
+    object Pink : ThemeTypes("Pink", { ThemeProvider.Pink(it) })
+    object Yellow : ThemeTypes("Yellow", { ThemeProvider.Yellow(it) })
+    object Twitter : ThemeTypes("Twitter", { ThemeProvider.Twitter(it) })
+    object Youtube : ThemeTypes("Youtube", { ThemeProvider.Youtube(it) })
+    object JetCaster : ThemeTypes("JetCaster", { ThemeProvider.JetCaster(it) })
+    object JetSurvey : ThemeTypes("JetSurvey", { ThemeProvider.JetSurvey(it) })
+    object JetSnack : ThemeTypes("JetSnack", { ThemeProvider.JetSnack(it) })
+    object RusticTheme : ThemeTypes("RusticTheme", { ThemeProvider.RusticTheme(it) })
+}
+
+val themeTypeList = listOf(
+    ThemeTypes.Pink,
+    ThemeTypes.Yellow,
+    ThemeTypes.Twitter,
+    ThemeTypes.Youtube,
+    ThemeTypes.JetCaster,
+    ThemeTypes.JetSurvey,
+    ThemeTypes.JetSnack,
+    ThemeTypes.RusticTheme,
+)
