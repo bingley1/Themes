@@ -28,7 +28,6 @@ import com.example.jetsnack.ui.theme.Neutral7
 import com.example.jetsnack.ui.theme.Ocean11
 import com.example.jetsnack.ui.theme.Ocean3
 import com.example.jetsnack.ui.theme.Shadow5
-import com.example.jetsnack.ui.theme.Shapes
 import com.example.jetsnack.ui.theme.Typography
 
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.scaffold.jetcaster.theme
+package com.sryang.library.jetcaster.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Shapes

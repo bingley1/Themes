@@ -21,7 +21,6 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import com.example.scaffold.jetsurvey.theme.Shapes
 import com.example.scaffold.jetsurvey.theme.Typography
 
 const val stronglyDeemphasizedAlpha = 0.6f

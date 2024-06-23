@@ -1,7 +1,10 @@
 package com.sryang.library
 
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.foundation.shape.CutCornerShape
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Shapes
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -18,9 +21,9 @@ private val primaryContainer = Color(0xFF000000)
 private val onPrimary = Color(0xFF000000)
 private val onTertiary = Color(0xFFe3d6ab)
 private val background = Color(0xFF000000)
-private val secondary = Color(0xFF000000)
+private val secondary = Color(0xFFFFFFFF)
 private val onSecondary = Color(0xFF000000)
-private val onBackground = Color(0xFFd78258)
+private val onBackground = Color(0xFFFFFFFF)
 private val surface = Color(0xFF111111)
 private val onSurface = Color(0xFFFFFFFF)
 private val onSecondaryContainer = Color(0xFFFFFFFF)
@@ -90,7 +93,7 @@ fun Youtube(
     content: @Composable () -> Unit,
 ) {
     val colorScheme = if (darkTheme) {
-        rustThemeDark
+        youtubeThemeLight
     } else {
         youtubeThemeLight
     }
@@ -104,7 +107,14 @@ fun Youtube(
     ) {
         MaterialTheme(
             colorScheme = colorScheme,
-            content = content
+            content = content,
+            shapes = Shapes(
+                extraSmall = RoundedCornerShape(0.dp),
+                extraLarge = RoundedCornerShape(0.dp),
+                small = RoundedCornerShape(0.dp),
+                medium = CutCornerShape(12.dp),
+                large = RoundedCornerShape(0.dp),
+            )
         )
     }
 
