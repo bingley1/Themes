@@ -17,7 +17,7 @@ import com.sryang.library.owl.theme.LocalElevations
 import com.sryang.library.owl.theme.LocalImages
 
 private val primary = Color(0xFFFFFFFF)
-private val primaryContainer = Color(0xFF000000)
+private val primaryContainer = Color(0xFFFFFFFF)
 private val onPrimary = Color(0xFF000000)
 private val onTertiary = Color(0xFFe3d6ab)
 private val background = Color(0xFF000000)
@@ -31,13 +31,6 @@ private val secondaryContainer = Color(0xFF444444)
 private val onSurfaceVariant = Color(0xFFFFFFFF)
 private val outline = Color(0xFFFFFFFF)
 
-private val rustThemeDark = darkColorScheme(
-    primary = primary,
-    secondary = secondary,
-    surface = surface,
-    primaryContainer = primaryContainer
-)
-
 /**
  * button
  * @param onPrimary filled button text color
@@ -46,15 +39,14 @@ private val rustThemeDark = darkColorScheme(
  * @param outline outline button color
  * @param onSecondaryContainer tonal button background
  * @param secondaryContainer tonal background
- *
- *
+ * @param primaryContainer bottom app bar background
  * @param surface bottom navigation bar background, top app bar background, elevatedButton background
  */
 private val youtubeThemeLight = lightColorScheme(
     primary = primary, // top app bar title
     onPrimary = onPrimary,
     secondary = secondary,
-    primaryContainer = primaryContainer, // bottom app bar background
+    primaryContainer = primaryContainer,
     onSecondary = onSecondary, // contents color
     surface = surface,
     onSurface = onSurface,        // app bar text color
@@ -109,11 +101,11 @@ fun Youtube(
             colorScheme = colorScheme,
             content = content,
             shapes = Shapes(
-                extraSmall = RoundedCornerShape(0.dp),
-                extraLarge = RoundedCornerShape(0.dp),
-                small = RoundedCornerShape(0.dp),
-                medium = CutCornerShape(12.dp),
-                large = RoundedCornerShape(0.dp),
+//                extraSmall = RoundedCornerShape(0.dp),
+//                extraLarge = RoundedCornerShape(0.dp),
+//                small = RoundedCornerShape(0.dp),
+//                medium = CutCornerShape(12.dp),
+//                large = RoundedCornerShape(0.dp),
             )
         )
     }

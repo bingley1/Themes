@@ -28,6 +28,17 @@ private val rustThemeDark = darkColorScheme(
     primaryContainer = primaryContainer
 )
 
+/**
+ * button
+ * @param onPrimary filled button text color
+ * @param surface elevatedButton background
+ * @param primary button(Outlined, elevated, text) text color
+ * @param outline outline button color
+ * @param onSecondaryContainer tonal button Text Color
+ * @param secondaryContainer tonal button background
+ * @param primaryContainer bottom app bar background
+ * @param surface bottom navigation bar background, top app bar background, elevatedButton background
+ */
 private val rustThemeLight = lightColorScheme(
     primary = primary, // top app bar title,
     onPrimary = Color.White,

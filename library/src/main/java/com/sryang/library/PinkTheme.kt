@@ -38,6 +38,8 @@ private val secondaryContainer = black500
  * @param outline outline button color
  * @param onSecondaryContainer tonal button Text Color
  * @param secondaryContainer tonal button background
+ * @param primaryContainer bottom app bar background
+ * @param surface bottom navigation bar background, top app bar background, elevatedButton background
  */
 private val PinkThemeLight = lightColorScheme(
     primary = primary,
