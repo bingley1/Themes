@@ -30,6 +30,7 @@ private val onSecondaryContainer = Color(0xFFFFFFFF)
 private val secondaryContainer = Color(0xFF444444)
 private val onSurfaceVariant = Color(0xFFFFFFFF)
 private val outline = Color(0xFFFFFFFF)
+private val surfaceVariant = Color(0x00000000)
 
 /**
  * button
@@ -41,6 +42,7 @@ private val outline = Color(0xFFFFFFFF)
  * @param secondaryContainer tonal background
  * @param primaryContainer bottom app bar background
  * @param surface bottom navigation bar background, top app bar background, elevatedButton background
+ * @param surfaceVariant textField Container
  */
 private val youtubeThemeLight = lightColorScheme(
     primary = primary, // top app bar title
@@ -62,7 +64,7 @@ private val youtubeThemeLight = lightColorScheme(
 //    inversePrimary = Color.Blue,
 //    tertiary = Color.Blue,
 //    tertiaryContainer = Color.Blue,
-//    surfaceVariant = Color.Blue,
+    surfaceVariant = surfaceVariant,
 //    surfaceTint = Color.Blue,
 //    inverseSurface = Color.Blue,
 //    inverseOnSurface = Color.Blue,

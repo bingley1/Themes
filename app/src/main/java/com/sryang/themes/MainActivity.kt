@@ -7,6 +7,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -16,15 +17,19 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.VerticalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -117,7 +122,8 @@ fun YoutubePreview() {
                     .fillMaxSize()
                     .padding(it)
             ) {
-                Box(modifier = Modifier.align(Alignment.Center)) {
+                Column(modifier = Modifier.align(Alignment.Center)) {
+                    PreviewTextField()
                     Buttons()
                 }
 
@@ -136,6 +142,35 @@ fun YoutubePreview() {
             }
         }
     }
+}
+
+
+@Preview
+@Composable
+fun PreviewTextField() {
+    TextField(
+        label = {
+            Text(text = "label")
+        },
+        leadingIcon = {
+            IconButton(onClick = { /*TODO*/ }) {
+                Icon(imageVector = Icons.AutoMirrored.Default.ArrowBack, contentDescription = "")
+            }
+        },
+        trailingIcon = {
+            IconButton(onClick = { /*TODO*/ }) {
+                Icon(imageVector = Icons.Default.Clear, contentDescription = "")
+            }
+        },
+        prefix = {
+            Text(text = "$")
+        },
+        suffix = {
+            Text(text = "@gmail.com")
+        },
+        value = "value",
+        onValueChange = {}
+    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
