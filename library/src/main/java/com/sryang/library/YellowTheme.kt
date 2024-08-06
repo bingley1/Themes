@@ -27,7 +27,7 @@ private val surface = yellow150
 private val onSecondaryContainer = Brown700
 private val onPrimary = yellow100
 private val secondaryContainer = Brown300
-private val surfaceVariant = yellow200
+private val surfaceVariant = yellow150
 
 
 /**
