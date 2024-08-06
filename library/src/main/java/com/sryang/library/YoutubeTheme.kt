@@ -30,7 +30,7 @@ private val onSecondaryContainer = Color(0xFFFFFFFF)
 private val secondaryContainer = Color(0xFF444444)
 private val onSurfaceVariant = Color(0xFFFFFFFF)
 private val outline = Color(0xFFFFFFFF)
-private val surfaceVariant = Color(0x00000000)
+private val surfaceVariant = Color(0xFF222222)
 
 /**
  * button

@@ -10,6 +10,7 @@ import com.sryang.library.owl.theme.OwlTheme
 private val pink100 = Color(0xFFF8A1B6)
 private val pink150 = Color(0xFFFF94AE)
 private val pink200 = Color(0xFFFFADC1)
+private val pink250 = Color(0xFFF87293)
 private val pink300 = Color(0xFFF15D81)
 private val pink500 = Color(0xffff0266)
 private val pink600 = Color(0xffd8004d)
@@ -29,6 +30,7 @@ private val surface = pink300
 private val onSecondaryContainer = black600
 private val onPrimary = pink100
 private val secondaryContainer = black500
+private val surfaceVariant = pink250
 
 /**
  * button
@@ -40,6 +42,7 @@ private val secondaryContainer = black500
  * @param secondaryContainer tonal button background
  * @param primaryContainer bottom app bar background
  * @param surface bottom navigation bar background, top app bar background, elevatedButton background
+ * @param surfaceVariant textField Container
  */
 private val PinkThemeLight = lightColorScheme(
     primary = primary,
@@ -51,7 +54,8 @@ private val PinkThemeLight = lightColorScheme(
     background = background,
     outline = outline,
     onSecondaryContainer = onSecondaryContainer,
-    secondaryContainer = secondaryContainer
+    secondaryContainer = secondaryContainer,
+    surfaceVariant = surfaceVariant
 )
 
 private val PinkThemeDark = darkColorScheme(

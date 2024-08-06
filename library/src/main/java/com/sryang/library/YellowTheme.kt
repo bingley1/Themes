@@ -16,6 +16,7 @@ private val yellow700 = Color(0xFFFFDD00)
 private val Brown700 = Color(0xFF763a12)
 private val Brown500 = Color(0xFFAA4C0A)
 private val Brown300 = Color(0xFFE08500)
+private val Brown100 = Color(0xFFFCC678)
 private val yellprivateowDarkPrimary = Color(0xff242316)
 
 private val background = yellow100
@@ -26,6 +27,7 @@ private val surface = yellow150
 private val onSecondaryContainer = Brown700
 private val onPrimary = yellow100
 private val secondaryContainer = Brown300
+private val surfaceVariant = yellow200
 
 
 /**
@@ -38,6 +40,7 @@ private val secondaryContainer = Brown300
  * @param secondaryContainer tonal button background
  * @param primaryContainer bottom app bar background
  * @param surface bottom navigation bar background, top app bar background, elevatedButton background
+ * @param surfaceVariant textField Container
  */
 private val YellowThemeLight = lightColorScheme(
     primary = primary,
@@ -49,7 +52,9 @@ private val YellowThemeLight = lightColorScheme(
     background = background,
     outline = outline,
     onSecondaryContainer = onSecondaryContainer,
-    secondaryContainer = secondaryContainer
+    secondaryContainer = secondaryContainer,
+    surfaceVariant = surfaceVariant
+
 )
 
 private val YellowThemeDark = darkColorScheme(

@@ -31,6 +31,7 @@ private val surface = blue300
 private val onSecondaryContainer = blue900
 private val onPrimary = blue100
 private val secondaryContainer = blue500
+private val surfaceVariant = blue300
 
 
 /**
@@ -43,6 +44,7 @@ private val secondaryContainer = blue500
  * @param secondaryContainer tonal button background
  * @param primaryContainer bottom app bar background
  * @param surface bottom navigation bar background, top app bar background, elevatedButton background
+ * @param surfaceVariant textField Container
  */
 private val BlueThemeLight = lightColorScheme(
     primary = primary,
@@ -54,7 +56,8 @@ private val BlueThemeLight = lightColorScheme(
     background = background,
     outline = outline,
     onSecondaryContainer = onSecondaryContainer,
-    secondaryContainer = secondaryContainer
+    secondaryContainer = secondaryContainer,
+    surfaceVariant = surfaceVariant
 )
 
 private val BlueThemeDark = darkColorScheme(

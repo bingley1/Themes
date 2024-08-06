@@ -185,7 +185,8 @@ fun JetCasterPreview() {
                     .fillMaxSize()
                     .padding(it)
             ) {
-                Box(modifier = Modifier.align(Alignment.Center)) {
+                Column(modifier = Modifier.align(Alignment.Center)) {
+                    PreviewTextField()
                     Buttons()
                 }
 
@@ -209,7 +210,8 @@ fun YellowPreview() {
                     .fillMaxSize()
                     .padding(it)
             ) {
-                Box(modifier = Modifier.align(Alignment.Center)) {
+                Column(modifier = Modifier.align(Alignment.Center)) {
+                    PreviewTextField()
                     Buttons()
                 }
             }
@@ -229,7 +231,8 @@ fun PinkPreview() {
                     .fillMaxSize()
                     .padding(it)
             ) {
-                Box(modifier = Modifier.align(Alignment.Center)) {
+                Column(modifier = Modifier.align(Alignment.Center)) {
+                    PreviewTextField()
                     Buttons()
                 }
             }
@@ -249,7 +252,8 @@ fun TwitterPreview() {
                     .fillMaxSize()
                     .padding(it)
             ) {
-                Box(modifier = Modifier.align(Alignment.Center)) {
+                Column(modifier = Modifier.align(Alignment.Center)) {
+                    PreviewTextField()
                     Buttons()
                 }
             }
@@ -269,7 +273,8 @@ fun JetSurveyPreview() {
                     .fillMaxSize()
                     .padding(it)
             ) {
-                Box(modifier = Modifier.align(Alignment.Center)) {
+                Column(modifier = Modifier.align(Alignment.Center)) {
+                    PreviewTextField()
                     Buttons()
                 }
             }
@@ -289,23 +294,11 @@ fun JetSnackPreview() {
                     .fillMaxSize()
                     .padding(it)
             ) {
-                Box(modifier = Modifier.align(Alignment.Center)) {
+                Column(modifier = Modifier.align(Alignment.Center)) {
+                    PreviewTextField()
                     Buttons()
                 }
             }
-        }
-    }
-}
-
-@Preview
-@Composable
-fun Test() {
-    Surface(
-        color = Color.Red,
-        contentColor = Color.White
-    ) {
-        Box(modifier = Modifier.fillMaxSize()) {
-            Text(text = "!!!!")
         }
     }
 }
